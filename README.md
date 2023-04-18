@@ -11,11 +11,7 @@ Op de relatief onschuldige vraag of ik data dynamisch zou kunnen visualiseren me
 
 Inmiddels Inmiddels een jaar verder heb ik met behulp van de PowerBI API, D3.js framework, React en veel JS/TS versie 2.0 opgeleverd van de Fellowmining swimminglane visual.
 
-<img src="./assets/900px-New_Power_BI_Logo.svg.png" width="100px" />
-<img src="./assets/react.svg" width="100px" />
-<img src="./assets/d3.svg" width="100px" />
-<img src="./assets/JavaScript-logo.png" width="100px" />
-<img src="./assets/Typescript_logo_2020.png" width="100px" />
+<img src="./assets/900px-New_Power_BI_Logo.svg.png" width="100px" /><img src="./assets/react.svg" width="100px" /><img src="./assets/d3.svg" width="100px" /><img src="./assets/JavaScript-logo.png" width="100px" /><img src="./assets/Typescript_logo_2020.png" width="100px" />
 
 Het probleem waar het Fellowmining project team tegen aan liep was dat zij het, met de beschikbare middelen bronnen, niet voor elkaar kregen de data in PowerBI weer tegen als een zgn. _swimming lane graph_. Zelf maken was in dit geval de beste optie. 
 
@@ -32,9 +28,7 @@ De uitdaging bestond uit drie delen, nl.:
 ## Data conversie
 Voor het te kunnen weergegeven van een zgn. _swimming lane graph_ was de eerste stap  het omzetten van de data afkomstig uit PowerBI naar een meer bruikbaar data type, een [Directed graph](https://en.wikipedia.org/wiki/Directed_graph).
 
-<img src="./assets//table_data.svg" width="150px" />
-<img src="./assets/right-arrow-48.png" height="150px" width="100px" />
-<img src="./assets/Directed_graph_no_background.svg" width="200px" />
+<img src="./assets//table_data.svg" width="150px" /><img src="./assets/right-arrow-48.png" height="150px" width="100px" /><img src="./assets/Directed_graph_no_background.svg" width="200px" />
 
 PowerBI kent het datatype _graph_ niet als type dat out-of-the-box kan worden gebruikt door custom visuals. Wat de custom visual ontvangt is JSON object waarin de data, afhankelijk van de zgn. [_data view mapping_](https://learn.microsoft.com/en-us/power-bi/developer/visuals/dataview-mappings), word aangeboden als bijvoorbeeld _categories_ & _values_ (bij categorical), of als _columns_ & _rows_ (bij tables).
 
