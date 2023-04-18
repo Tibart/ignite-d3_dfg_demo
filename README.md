@@ -42,8 +42,6 @@ De table data moet eerst worden gesorteerd zodat de regels op event volgorde sta
 ## Visualiseren
 Nu dat de data is gevormd in een graph data type, kunnen we aan de slag met het visualiseren daarvan. Hiervoor kan bijvoorbeeld [Graphviz](https://graphviz.org/) gebruikt worden. Los van dat deze oplossing niet onmiddellijk de swimming lane graph aanbied, is Graphviz gebruiken in combinatie met PowerBI niet vanzelfsprekend mogelijk. Microsoft's PowerBI zelf draagt de [D3.js library](https://d3js.org/) aan. Hiermee kan data in combinatie met React en de [PowerBI-visuals tools API](https://github.com/microsoft/PowerBI-visuals-tools) relatief eenvoudig worden gevisualiseerd. 
 
-![alt](https://)
-
 D3.js is een library/framework dat het Document Object Model ([DOM](https://en.wikipedia.org/wiki/Document_Object_Model)) kan manipuleren o.b.v. data. Ofwel D3.js kan op een relatief makkelijke manier web pagina elementen en haar attributen aanpassen, toevoegen of verwijderen. Dit framework is dermate buitengewoon compleet en maakt visualiseren van eigenlijk alles mogelijk. Je moet het alleen wel zelf maken!
 
 > **DEMO** data omzetten naar swimminglane 
