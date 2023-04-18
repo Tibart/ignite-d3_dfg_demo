@@ -1,0 +1,518 @@
+{
+    "nodes": [
+        {
+            "id": "A",
+            "label": "Purchase order line is created",
+            "metadata": {
+                "belongsToLane": "Purchase",
+                "selectionId": {
+                    "deepestNodeLevelInPath": -1,
+                    "measures": [],
+                    "dataMap": {
+                        "20230124_miner_stepId.EventId": [
+                            {
+                                "identityIndex": 0
+                            }
+                        ]
+                    },
+                    "nodeIsCollapsed": null,
+                    "nodeIndexes": [],
+                    "key": "{\"20230124_miner_stepId.EventId\":[{\"identityIndex\":0}]}[]"
+                },
+                "belongsToVariant": [
+                    0
+                ],
+                "variantDurationFromCreatedSum": {
+                    "0": 0
+                },
+                "addedValue": 1
+            }
+        },
+        {
+            "id": "B",
+            "label": "Purchase order is confirmed",
+            "metadata": {
+                "belongsToLane": "Purchase",
+                "selectionId": {
+                    "deepestNodeLevelInPath": -1,
+                    "measures": [],
+                    "dataMap": {
+                        "20230124_miner_stepId.EventId": [
+                            {
+                                "identityIndex": 1
+                            }
+                        ]
+                    },
+                    "nodeIsCollapsed": null,
+                    "nodeIndexes": [],
+                    "key": "{\"20230124_miner_stepId.EventId\":[{\"identityIndex\":1}]}[]"
+                },
+                "belongsToVariant": [
+                    0
+                ],
+                "variantDurationFromCreatedSum": {
+                    "0": 153188
+                },
+                "addedValue": 2
+            }
+        },
+        {
+            "id": "C",
+            "label": "Document is printed",
+            "metadata": {
+                "belongsToLane": "Purchase",
+                "selectionId": {
+                    "deepestNodeLevelInPath": -1,
+                    "measures": [],
+                    "dataMap": {
+                        "20230124_miner_stepId.EventId": [
+                            {
+                                "identityIndex": 2
+                            }
+                        ]
+                    },
+                    "nodeIsCollapsed": null,
+                    "nodeIndexes": [],
+                    "key": "{\"20230124_miner_stepId.EventId\":[{\"identityIndex\":2}]}[]"
+                },
+                "belongsToVariant": [
+                    0
+                ],
+                "variantDurationFromCreatedSum": {
+                    "0": 177553
+                },
+                "addedValue": 3
+            }
+        },
+        {
+            "id": "P",
+            "label": "Invoice Processing invoice imported",
+            "metadata": {
+                "belongsToLane": "Purchase",
+                "selectionId": {
+                    "deepestNodeLevelInPath": -1,
+                    "measures": [],
+                    "dataMap": {
+                        "20230124_miner_stepId.EventId": [
+                            {
+                                "identityIndex": 3
+                            }
+                        ]
+                    },
+                    "nodeIsCollapsed": null,
+                    "nodeIndexes": [],
+                    "key": "{\"20230124_miner_stepId.EventId\":[{\"identityIndex\":3}]}[]"
+                },
+                "belongsToVariant": [
+                    0
+                ],
+                "variantDurationFromCreatedSum": {
+                    "0": 448747236
+                },
+                "addedValue": 3
+            }
+        },
+        {
+            "id": "R",
+            "label": "Purchase order not available",
+            "metadata": {
+                "belongsToLane": "Purchase",
+                "selectionId": {
+                    "deepestNodeLevelInPath": -1,
+                    "measures": [],
+                    "dataMap": {
+                        "20230124_miner_stepId.EventId": [
+                            {
+                                "identityIndex": 4
+                            }
+                        ]
+                    },
+                    "nodeIsCollapsed": null,
+                    "nodeIndexes": [],
+                    "key": "{\"20230124_miner_stepId.EventId\":[{\"identityIndex\":4}]}[]"
+                },
+                "belongsToVariant": [
+                    0
+                ],
+                "variantDurationFromCreatedSum": {
+                    "0": 448747236
+                },
+                "addedValue": 3
+            }
+        },
+        {
+            "id": "S",
+            "label": "Invoice Processing invoice matched",
+            "metadata": {
+                "belongsToLane": "Purchase",
+                "selectionId": {
+                    "deepestNodeLevelInPath": -1,
+                    "measures": [],
+                    "dataMap": {
+                        "20230124_miner_stepId.EventId": [
+                            {
+                                "identityIndex": 6
+                            }
+                        ]
+                    },
+                    "nodeIsCollapsed": null,
+                    "nodeIndexes": [],
+                    "key": "{\"20230124_miner_stepId.EventId\":[{\"identityIndex\":6}]}[]"
+                },
+                "belongsToVariant": [
+                    0
+                ],
+                "variantDurationFromCreatedSum": {
+                    "0": 448747236
+                },
+                "addedValue": 3
+            }
+        },
+        {
+            "id": "U",
+            "label": "Check completed",
+            "metadata": {
+                "belongsToLane": "Purchase",
+                "selectionId": {
+                    "deepestNodeLevelInPath": -1,
+                    "measures": [],
+                    "dataMap": {
+                        "20230124_miner_stepId.EventId": [
+                            {
+                                "identityIndex": 7
+                            }
+                        ]
+                    },
+                    "nodeIsCollapsed": null,
+                    "nodeIndexes": [],
+                    "key": "{\"20230124_miner_stepId.EventId\":[{\"identityIndex\":7}]}[]"
+                },
+                "belongsToVariant": [
+                    0
+                ],
+                "variantDurationFromCreatedSum": {
+                    "0": 448747236
+                },
+                "addedValue": 3
+            }
+        },
+        {
+            "id": "W",
+            "label": "Release",
+            "metadata": {
+                "belongsToLane": "Purchase",
+                "selectionId": {
+                    "deepestNodeLevelInPath": -1,
+                    "measures": [],
+                    "dataMap": {
+                        "20230124_miner_stepId.EventId": [
+                            {
+                                "identityIndex": 8
+                            }
+                        ]
+                    },
+                    "nodeIsCollapsed": null,
+                    "nodeIndexes": [],
+                    "key": "{\"20230124_miner_stepId.EventId\":[{\"identityIndex\":8}]}[]"
+                },
+                "belongsToVariant": [
+                    0
+                ],
+                "variantDurationFromCreatedSum": {
+                    "0": 448747236
+                },
+                "addedValue": 3
+            }
+        },
+        {
+            "id": "K",
+            "label": "Purchase order is received",
+            "metadata": {
+                "belongsToLane": "Logistics",
+                "selectionId": {
+                    "deepestNodeLevelInPath": -1,
+                    "measures": [],
+                    "dataMap": {
+                        "20230124_miner_stepId.EventId": [
+                            {
+                                "identityIndex": 9
+                            }
+                        ]
+                    },
+                    "nodeIsCollapsed": null,
+                    "nodeIndexes": [],
+                    "key": "{\"20230124_miner_stepId.EventId\":[{\"identityIndex\":9}]}[]"
+                },
+                "belongsToVariant": [
+                    0
+                ],
+                "variantDurationFromCreatedSum": {
+                    "0": 503245488
+                },
+                "addedValue": 2
+            }
+        },
+        {
+            "id": "Y",
+            "label": "Invoice is paid",
+            "metadata": {
+                "belongsToLane": "Finance",
+                "selectionId": {
+                    "deepestNodeLevelInPath": -1,
+                    "measures": [],
+                    "dataMap": {
+                        "20230124_miner_stepId.EventId": [
+                            {
+                                "identityIndex": 10
+                            }
+                        ]
+                    },
+                    "nodeIsCollapsed": null,
+                    "nodeIndexes": [],
+                    "key": "{\"20230124_miner_stepId.EventId\":[{\"identityIndex\":10}]}[]"
+                },
+                "belongsToVariant": [
+                    0
+                ],
+                "variantDurationFromCreatedSum": {
+                    "0": 646862097
+                },
+                "addedValue": 3
+            }
+        },
+        {
+            "id": "J",
+            "label": "Purchase order is re-confirmed",
+            "metadata": {
+                "belongsToLane": "Purchase",
+                "selectionId": {
+                    "deepestNodeLevelInPath": -1,
+                    "measures": [],
+                    "dataMap": {
+                        "20230124_miner_stepId.EventId": [
+                            {
+                                "identityIndex": 11
+                            }
+                        ]
+                    },
+                    "nodeIsCollapsed": null,
+                    "nodeIndexes": [],
+                    "key": "{\"20230124_miner_stepId.EventId\":[{\"identityIndex\":11}]}[]"
+                },
+                "belongsToVariant": [
+                    0
+                ],
+                "variantDurationFromCreatedSum": {
+                    "0": 1972594883
+                },
+                "addedValue": 1
+            }
+        }
+    ],
+    "edges": [
+        {
+            "source": "A",
+            "target": "B",
+            "metadata": {
+                "belongsToVariant": [
+                    0
+                ],
+                "variantDurationSum": {
+                    "0": 153188
+                }
+            }
+        },
+        {
+            "source": "B",
+            "target": "C",
+            "metadata": {
+                "belongsToVariant": [
+                    0
+                ],
+                "variantDurationSum": {
+                    "0": 24365
+                }
+            }
+        },
+        {
+            "source": "C",
+            "target": "P",
+            "metadata": {
+                "belongsToVariant": [
+                    0
+                ],
+                "variantDurationSum": {
+                    "0": 448569683
+                }
+            }
+        },
+        {
+            "source": "P",
+            "target": "R",
+            "metadata": {
+                "belongsToVariant": [
+                    0
+                ],
+                "variantDurationSum": {
+                    "0": 0
+                }
+            }
+        },
+        {
+            "source": "R",
+            "target": "R",
+            "metadata": {
+                "belongsToVariant": [
+                    0
+                ],
+                "variantDurationSum": {
+                    "0": 0
+                }
+            }
+        },
+        {
+            "source": "R",
+            "target": "S",
+            "metadata": {
+                "belongsToVariant": [
+                    0
+                ],
+                "variantDurationSum": {
+                    "0": 0
+                }
+            }
+        },
+        {
+            "source": "S",
+            "target": "U",
+            "metadata": {
+                "belongsToVariant": [
+                    0
+                ],
+                "variantDurationSum": {
+                    "0": 0
+                }
+            }
+        },
+        {
+            "source": "U",
+            "target": "W",
+            "metadata": {
+                "belongsToVariant": [
+                    0
+                ],
+                "variantDurationSum": {
+                    "0": 0
+                }
+            }
+        },
+        {
+            "source": "W",
+            "target": "K",
+            "metadata": {
+                "belongsToVariant": [
+                    0
+                ],
+                "variantDurationSum": {
+                    "0": 54498252
+                }
+            }
+        },
+        {
+            "source": "K",
+            "target": "Y",
+            "metadata": {
+                "belongsToVariant": [
+                    0
+                ],
+                "variantDurationSum": {
+                    "0": 143616609
+                }
+            }
+        },
+        {
+            "source": "Y",
+            "target": "J",
+            "metadata": {
+                "belongsToVariant": [
+                    0
+                ],
+                "variantDurationSum": {
+                    "0": 1325732786
+                }
+            }
+        },
+        {
+            "source": "J",
+            "target": "",
+            "metadata": {
+                "belongsToVariant": [
+                    0
+                ],
+                "variantDurationSum": {
+                    "0": 0
+                }
+            }
+        }
+    ],
+    "metadata": {
+        "settings": {
+            "fontFamily": "Candara",
+            "fontSize": 10,
+            "laneColor": "#000",
+            "laneBorderColor": "#000",
+            "laneFontColor": "#fff",
+            "laneFontSize": 100,
+            "nodeWidth": 70,
+            "nodeHeight": 45,
+            "nodeSpace": 55,
+            "nodeColor": "#CEE3F5",
+            "nodeBorderColor": "#759DC5",
+            "nodeBorderWidth": 1,
+            "nodeFontColor": "#000",
+            "nodeFontSize": 65,
+            "loopColor": "#759DC5",
+            "loopFontColor": "#fff",
+            "loopFontSize": 90,
+            "edgeWidth": 28,
+            "edgeHeight": 19,
+            "edgeColor": "#5082B4",
+            "edgeBorderColor": "#5082B4",
+            "edgeFontColor": "#fff",
+            "edgeFontSize": 49,
+            "laneHeight": 112.5,
+            "menuBarColor": "#5082B4",
+            "menuBarFontColor": "#fff",
+            "height": 339.5,
+            "width": 1402.5
+        },
+        "variants": [
+            {
+                "variantString": "ABCPRRSUWKYJ",
+                "cases": 186,
+                "firstTimeRight": false,
+                "selectionId": {
+                    "deepestNodeLevelInPath": -1,
+                    "measures": [],
+                    "dataMap": {
+                        "20230124_miner_stepId.Miner_Variant": [
+                            {
+                                "identityIndex": 0
+                            }
+                        ]
+                    },
+                    "nodeIsCollapsed": null,
+                    "nodeIndexes": [],
+                    "key": "{\"20230124_miner_stepId.Miner_Variant\":[{\"identityIndex\":0}]}[]"
+                },
+                "duration": 10605349,
+                "originalIndex": 0
+            }
+        ],
+        "lanes": [
+            "Purchase",
+            "Logistics",
+            "Finance"
+        ]
+    }
+}

@@ -1,0 +1,1356 @@
+{
+    "tree": null,
+    "single": null,
+    "categorical": null,
+    "matrix": null,
+    "metadata": {
+        "columns": [
+            {
+                "roles": {
+                    "cases": true
+                },
+                "type": {
+                    "underlyingType": 260,
+                    "category": null,
+                    "primitiveType": 4,
+                    "extendedType": 260,
+                    "categoryString": null,
+                    "text": false,
+                    "numeric": true,
+                    "integer": true,
+                    "bool": false,
+                    "dateTime": false,
+                    "duration": false,
+                    "binary": false,
+                    "json": false,
+                    "none": false
+                },
+                "displayName": "Count of CaseId",
+                "queryName": "CountNonNull(20230124_miner_stepId.CaseId)",
+                "expr": {
+                    "_kind": 4,
+                    "arg": {
+                        "_kind": 2,
+                        "source": {
+                            "_kind": 0,
+                            "entity": "20230124_miner_stepId",
+                            "variable": "2",
+                            "kind": 0
+                        },
+                        "ref": "CaseId",
+                        "kind": 2
+                    },
+                    "func": 5,
+                    "kind": 4
+                },
+                "sort": 2,
+                "sortOrder": 0,
+                "rolesIndex": {
+                    "cases": [
+                        0
+                    ]
+                },
+                "index": 0,
+                "isMeasure": true,
+                "aggregates": {
+                    "minLocal": 186,
+                    "maxLocal": 186
+                }
+            },
+            {
+                "roles": {
+                    "eventId": true
+                },
+                "type": {
+                    "underlyingType": 260,
+                    "category": null,
+                    "primitiveType": 4,
+                    "extendedType": 260,
+                    "categoryString": null,
+                    "text": false,
+                    "numeric": true,
+                    "integer": true,
+                    "bool": false,
+                    "dateTime": false,
+                    "duration": false,
+                    "binary": false,
+                    "json": false,
+                    "none": false
+                },
+                "format": "0",
+                "displayName": "EventId",
+                "queryName": "20230124_miner_stepId.EventId",
+                "expr": {
+                    "_kind": 2,
+                    "source": {
+                        "_kind": 0,
+                        "entity": "20230124_miner_stepId",
+                        "variable": "2",
+                        "kind": 0
+                    },
+                    "ref": "EventId",
+                    "kind": 2
+                },
+                "rolesIndex": {
+                    "eventId": [
+                        0
+                    ]
+                },
+                "index": 1,
+                "identityExprs": [
+                    {
+                        "_kind": 2,
+                        "source": {
+                            "_kind": 0,
+                            "entity": "20230124_miner_stepId",
+                            "kind": 0
+                        },
+                        "ref": "EventId",
+                        "kind": 2
+                    }
+                ]
+            },
+            {
+                "roles": {
+                    "eventStep": true
+                },
+                "type": {
+                    "underlyingType": 260,
+                    "category": null,
+                    "primitiveType": 4,
+                    "extendedType": 260,
+                    "categoryString": null,
+                    "text": false,
+                    "numeric": true,
+                    "integer": true,
+                    "bool": false,
+                    "dateTime": false,
+                    "duration": false,
+                    "binary": false,
+                    "json": false,
+                    "none": false
+                },
+                "format": "0",
+                "displayName": "Miner_StepId",
+                "queryName": "20230124_miner_stepId.Miner_StepId",
+                "expr": {
+                    "_kind": 2,
+                    "source": {
+                        "_kind": 0,
+                        "entity": "20230124_miner_stepId",
+                        "variable": "2",
+                        "kind": 0
+                    },
+                    "ref": "Miner_StepId",
+                    "kind": 2
+                },
+                "sort": 1,
+                "sortOrder": 2,
+                "rolesIndex": {
+                    "eventStep": [
+                        0
+                    ]
+                },
+                "index": 2,
+                "identityExprs": [
+                    {
+                        "_kind": 2,
+                        "source": {
+                            "_kind": 0,
+                            "entity": "20230124_miner_stepId",
+                            "kind": 0
+                        },
+                        "ref": "Miner_StepId",
+                        "kind": 2
+                    }
+                ]
+            },
+            {
+                "roles": {
+                    "description": true
+                },
+                "type": {
+                    "underlyingType": 1,
+                    "category": null,
+                    "primitiveType": 1,
+                    "extendedType": 1,
+                    "categoryString": null,
+                    "text": true,
+                    "numeric": false,
+                    "integer": false,
+                    "bool": false,
+                    "dateTime": false,
+                    "duration": false,
+                    "binary": false,
+                    "json": false,
+                    "none": false
+                },
+                "displayName": "EventDescription",
+                "queryName": "20230124_miner_stepId.EventDescription",
+                "expr": {
+                    "_kind": 2,
+                    "source": {
+                        "_kind": 0,
+                        "entity": "20230124_miner_stepId",
+                        "variable": "2",
+                        "kind": 0
+                    },
+                    "ref": "EventDescription",
+                    "kind": 2
+                },
+                "rolesIndex": {
+                    "description": [
+                        0
+                    ]
+                },
+                "index": 3,
+                "identityExprs": [
+                    {
+                        "_kind": 2,
+                        "source": {
+                            "_kind": 0,
+                            "entity": "20230124_miner_stepId",
+                            "kind": 0
+                        },
+                        "ref": "EventDescription",
+                        "kind": 2
+                    }
+                ]
+            },
+            {
+                "roles": {
+                    "activityCharacter": true
+                },
+                "type": {
+                    "underlyingType": 1,
+                    "category": null,
+                    "primitiveType": 1,
+                    "extendedType": 1,
+                    "categoryString": null,
+                    "text": true,
+                    "numeric": false,
+                    "integer": false,
+                    "bool": false,
+                    "dateTime": false,
+                    "duration": false,
+                    "binary": false,
+                    "json": false,
+                    "none": false
+                },
+                "displayName": "Miner_ActivityChar",
+                "queryName": "20230124_miner_stepId.Miner_ActivityChar",
+                "expr": {
+                    "_kind": 2,
+                    "source": {
+                        "_kind": 0,
+                        "entity": "20230124_miner_stepId",
+                        "variable": "2",
+                        "kind": 0
+                    },
+                    "ref": "Miner_ActivityChar",
+                    "kind": 2
+                },
+                "rolesIndex": {
+                    "activityCharacter": [
+                        0
+                    ]
+                },
+                "index": 4,
+                "identityExprs": [
+                    {
+                        "_kind": 2,
+                        "source": {
+                            "_kind": 0,
+                            "entity": "20230124_miner_stepId",
+                            "kind": 0
+                        },
+                        "ref": "Miner_ActivityChar",
+                        "kind": 2
+                    }
+                ]
+            },
+            {
+                "roles": {
+                    "durationFromCreated": true
+                },
+                "type": {
+                    "underlyingType": 260,
+                    "category": null,
+                    "primitiveType": 4,
+                    "extendedType": 260,
+                    "categoryString": null,
+                    "text": false,
+                    "numeric": true,
+                    "integer": true,
+                    "bool": false,
+                    "dateTime": false,
+                    "duration": false,
+                    "binary": false,
+                    "json": false,
+                    "none": false
+                },
+                "format": "0",
+                "displayName": "Sum of Miner_DurationFromCreated",
+                "queryName": "Sum(20230124_miner_stepId.Miner_DurationFromCreated)",
+                "expr": {
+                    "_kind": 4,
+                    "arg": {
+                        "_kind": 2,
+                        "source": {
+                            "_kind": 0,
+                            "entity": "20230124_miner_stepId",
+                            "variable": "2",
+                            "kind": 0
+                        },
+                        "ref": "Miner_DurationFromCreated",
+                        "kind": 2
+                    },
+                    "func": 0,
+                    "kind": 4
+                },
+                "rolesIndex": {
+                    "durationFromCreated": [
+                        0
+                    ]
+                },
+                "index": 5,
+                "isMeasure": true,
+                "aggregates": {
+                    "minLocal": 0,
+                    "maxLocal": 1972594883
+                }
+            },
+            {
+                "roles": {
+                    "department": true
+                },
+                "type": {
+                    "underlyingType": 1,
+                    "category": null,
+                    "primitiveType": 1,
+                    "extendedType": 1,
+                    "categoryString": null,
+                    "text": true,
+                    "numeric": false,
+                    "integer": false,
+                    "bool": false,
+                    "dateTime": false,
+                    "duration": false,
+                    "binary": false,
+                    "json": false,
+                    "none": false
+                },
+                "displayName": "Department",
+                "queryName": "20230124_miner_stepId.Department",
+                "expr": {
+                    "_kind": 2,
+                    "source": {
+                        "_kind": 0,
+                        "entity": "20230124_miner_stepId",
+                        "variable": "2",
+                        "kind": 0
+                    },
+                    "ref": "Department",
+                    "kind": 2
+                },
+                "rolesIndex": {
+                    "department": [
+                        0
+                    ]
+                },
+                "index": 6,
+                "identityExprs": [
+                    {
+                        "_kind": 2,
+                        "source": {
+                            "_kind": 0,
+                            "entity": "20230124_miner_stepId",
+                            "kind": 0
+                        },
+                        "ref": "Department",
+                        "kind": 2
+                    }
+                ]
+            },
+            {
+                "roles": {
+                    "exceptionStep": true
+                },
+                "type": {
+                    "underlyingType": 5,
+                    "category": null,
+                    "primitiveType": 5,
+                    "extendedType": 5,
+                    "categoryString": null,
+                    "text": false,
+                    "numeric": false,
+                    "integer": false,
+                    "bool": true,
+                    "dateTime": false,
+                    "duration": false,
+                    "binary": false,
+                    "json": false,
+                    "none": false
+                },
+                "format": "\"TRUE\";\"TRUE\";\"FALSE\"",
+                "displayName": "ExceptionStep",
+                "queryName": "20230124_miner_stepId.ExceptionStep",
+                "expr": {
+                    "_kind": 2,
+                    "source": {
+                        "_kind": 0,
+                        "entity": "20230124_miner_stepId",
+                        "variable": "2",
+                        "kind": 0
+                    },
+                    "ref": "ExceptionStep",
+                    "kind": 2
+                },
+                "rolesIndex": {
+                    "exceptionStep": [
+                        0
+                    ]
+                },
+                "index": 7,
+                "identityExprs": [
+                    {
+                        "_kind": 2,
+                        "source": {
+                            "_kind": 0,
+                            "entity": "20230124_miner_stepId",
+                            "kind": 0
+                        },
+                        "ref": "ExceptionStep",
+                        "kind": 2
+                    }
+                ]
+            },
+            {
+                "roles": {
+                    "addedValue": true
+                },
+                "type": {
+                    "underlyingType": 260,
+                    "category": null,
+                    "primitiveType": 4,
+                    "extendedType": 260,
+                    "categoryString": null,
+                    "text": false,
+                    "numeric": true,
+                    "integer": true,
+                    "bool": false,
+                    "dateTime": false,
+                    "duration": false,
+                    "binary": false,
+                    "json": false,
+                    "none": false
+                },
+                "format": "0",
+                "displayName": "ValueEnum",
+                "queryName": "20230124_miner_stepId.ValueEnum",
+                "expr": {
+                    "_kind": 2,
+                    "source": {
+                        "_kind": 0,
+                        "entity": "20230124_miner_stepId",
+                        "variable": "2",
+                        "kind": 0
+                    },
+                    "ref": "ValueEnum",
+                    "kind": 2
+                },
+                "rolesIndex": {
+                    "addedValue": [
+                        0
+                    ]
+                },
+                "index": 8,
+                "identityExprs": [
+                    {
+                        "_kind": 2,
+                        "source": {
+                            "_kind": 0,
+                            "entity": "20230124_miner_stepId",
+                            "kind": 0
+                        },
+                        "ref": "ValueEnum",
+                        "kind": 2
+                    }
+                ]
+            },
+            {
+                "roles": {
+                    "variantString": true
+                },
+                "type": {
+                    "underlyingType": 1,
+                    "category": null,
+                    "primitiveType": 1,
+                    "extendedType": 1,
+                    "categoryString": null,
+                    "text": true,
+                    "numeric": false,
+                    "integer": false,
+                    "bool": false,
+                    "dateTime": false,
+                    "duration": false,
+                    "binary": false,
+                    "json": false,
+                    "none": false
+                },
+                "displayName": "Miner_Variant",
+                "queryName": "20230124_miner_stepId.Miner_Variant",
+                "expr": {
+                    "_kind": 2,
+                    "source": {
+                        "_kind": 0,
+                        "entity": "20230124_miner_stepId",
+                        "variable": "2",
+                        "kind": 0
+                    },
+                    "ref": "Miner_Variant",
+                    "kind": 2
+                },
+                "sort": 1,
+                "sortOrder": 1,
+                "rolesIndex": {
+                    "variantString": [
+                        0
+                    ]
+                },
+                "index": 9,
+                "identityExprs": [
+                    {
+                        "_kind": 2,
+                        "source": {
+                            "_kind": 0,
+                            "entity": "20230124_miner_stepId",
+                            "kind": 0
+                        },
+                        "ref": "Miner_Variant",
+                        "kind": 2
+                    }
+                ]
+            }
+        ],
+        "objects": {
+            "licensing": {
+                "licenseKey": "ZXlKbGVIQnBjbUYwYVc5dVJHRjBaU0k2SWpJd01qTXRNRGd0TURSVU1EQTZNREE2TURBck1EQTZNREFpTENKbWFXNWhiRVY0Y0dseVlYUnBiMjVFWVhSbElqb2lNakF5TXkwd09DMHdOVlF3TURvd01Eb3dNQ3N3TURvd01DSjktN2VmYzdmMDA0OWNlNzBjMTIzYmY2MTc1ZDVhZTAzZmQ3M2MxN2U5Mg=="
+            },
+            "backend": {
+                "expirationDate": "2023-08-04T00:00:00+00:00",
+                "finalExpirationDate": "2023-08-05T00:00:00+00:00"
+            },
+            "menu": {
+                "sortKind": 0,
+                "numberOfVariants": 5,
+                "maxSlider": 50
+            },
+            "settings": {
+                "edgeFontSize": 49,
+                "fontFamily": "Candara"
+            }
+        },
+        "isDataFilterApplied": true,
+        "dataRoles": {
+            "drillableRoles": {}
+        }
+    },
+    "table": {
+        "columns": [
+            {
+                "roles": {
+                    "cases": true
+                },
+                "type": {
+                    "underlyingType": 260,
+                    "category": null,
+                    "primitiveType": 4,
+                    "extendedType": 260,
+                    "categoryString": null,
+                    "text": false,
+                    "numeric": true,
+                    "integer": true,
+                    "bool": false,
+                    "dateTime": false,
+                    "duration": false,
+                    "binary": false,
+                    "json": false,
+                    "none": false
+                },
+                "displayName": "Count of CaseId",
+                "queryName": "CountNonNull(20230124_miner_stepId.CaseId)",
+                "expr": {
+                    "_kind": 4,
+                    "arg": {
+                        "_kind": 2,
+                        "source": {
+                            "_kind": 0,
+                            "entity": "20230124_miner_stepId",
+                            "variable": "2",
+                            "kind": 0
+                        },
+                        "ref": "CaseId",
+                        "kind": 2
+                    },
+                    "func": 5,
+                    "kind": 4
+                },
+                "sort": 2,
+                "sortOrder": 0,
+                "rolesIndex": {
+                    "cases": [
+                        0
+                    ]
+                },
+                "index": 0,
+                "isMeasure": true,
+                "aggregates": {
+                    "minLocal": 186,
+                    "maxLocal": 186
+                }
+            },
+            {
+                "roles": {
+                    "eventId": true
+                },
+                "type": {
+                    "underlyingType": 260,
+                    "category": null,
+                    "primitiveType": 4,
+                    "extendedType": 260,
+                    "categoryString": null,
+                    "text": false,
+                    "numeric": true,
+                    "integer": true,
+                    "bool": false,
+                    "dateTime": false,
+                    "duration": false,
+                    "binary": false,
+                    "json": false,
+                    "none": false
+                },
+                "format": "0",
+                "displayName": "EventId",
+                "queryName": "20230124_miner_stepId.EventId",
+                "expr": {
+                    "_kind": 2,
+                    "source": {
+                        "_kind": 0,
+                        "entity": "20230124_miner_stepId",
+                        "variable": "2",
+                        "kind": 0
+                    },
+                    "ref": "EventId",
+                    "kind": 2
+                },
+                "rolesIndex": {
+                    "eventId": [
+                        0
+                    ]
+                },
+                "index": 1,
+                "identityExprs": [
+                    {
+                        "_kind": 2,
+                        "source": {
+                            "_kind": 0,
+                            "entity": "20230124_miner_stepId",
+                            "kind": 0
+                        },
+                        "ref": "EventId",
+                        "kind": 2
+                    }
+                ]
+            },
+            {
+                "roles": {
+                    "eventStep": true
+                },
+                "type": {
+                    "underlyingType": 260,
+                    "category": null,
+                    "primitiveType": 4,
+                    "extendedType": 260,
+                    "categoryString": null,
+                    "text": false,
+                    "numeric": true,
+                    "integer": true,
+                    "bool": false,
+                    "dateTime": false,
+                    "duration": false,
+                    "binary": false,
+                    "json": false,
+                    "none": false
+                },
+                "format": "0",
+                "displayName": "Miner_StepId",
+                "queryName": "20230124_miner_stepId.Miner_StepId",
+                "expr": {
+                    "_kind": 2,
+                    "source": {
+                        "_kind": 0,
+                        "entity": "20230124_miner_stepId",
+                        "variable": "2",
+                        "kind": 0
+                    },
+                    "ref": "Miner_StepId",
+                    "kind": 2
+                },
+                "sort": 1,
+                "sortOrder": 2,
+                "rolesIndex": {
+                    "eventStep": [
+                        0
+                    ]
+                },
+                "index": 2,
+                "identityExprs": [
+                    {
+                        "_kind": 2,
+                        "source": {
+                            "_kind": 0,
+                            "entity": "20230124_miner_stepId",
+                            "kind": 0
+                        },
+                        "ref": "Miner_StepId",
+                        "kind": 2
+                    }
+                ]
+            },
+            {
+                "roles": {
+                    "description": true
+                },
+                "type": {
+                    "underlyingType": 1,
+                    "category": null,
+                    "primitiveType": 1,
+                    "extendedType": 1,
+                    "categoryString": null,
+                    "text": true,
+                    "numeric": false,
+                    "integer": false,
+                    "bool": false,
+                    "dateTime": false,
+                    "duration": false,
+                    "binary": false,
+                    "json": false,
+                    "none": false
+                },
+                "displayName": "EventDescription",
+                "queryName": "20230124_miner_stepId.EventDescription",
+                "expr": {
+                    "_kind": 2,
+                    "source": {
+                        "_kind": 0,
+                        "entity": "20230124_miner_stepId",
+                        "variable": "2",
+                        "kind": 0
+                    },
+                    "ref": "EventDescription",
+                    "kind": 2
+                },
+                "rolesIndex": {
+                    "description": [
+                        0
+                    ]
+                },
+                "index": 3,
+                "identityExprs": [
+                    {
+                        "_kind": 2,
+                        "source": {
+                            "_kind": 0,
+                            "entity": "20230124_miner_stepId",
+                            "kind": 0
+                        },
+                        "ref": "EventDescription",
+                        "kind": 2
+                    }
+                ]
+            },
+            {
+                "roles": {
+                    "activityCharacter": true
+                },
+                "type": {
+                    "underlyingType": 1,
+                    "category": null,
+                    "primitiveType": 1,
+                    "extendedType": 1,
+                    "categoryString": null,
+                    "text": true,
+                    "numeric": false,
+                    "integer": false,
+                    "bool": false,
+                    "dateTime": false,
+                    "duration": false,
+                    "binary": false,
+                    "json": false,
+                    "none": false
+                },
+                "displayName": "Miner_ActivityChar",
+                "queryName": "20230124_miner_stepId.Miner_ActivityChar",
+                "expr": {
+                    "_kind": 2,
+                    "source": {
+                        "_kind": 0,
+                        "entity": "20230124_miner_stepId",
+                        "variable": "2",
+                        "kind": 0
+                    },
+                    "ref": "Miner_ActivityChar",
+                    "kind": 2
+                },
+                "rolesIndex": {
+                    "activityCharacter": [
+                        0
+                    ]
+                },
+                "index": 4,
+                "identityExprs": [
+                    {
+                        "_kind": 2,
+                        "source": {
+                            "_kind": 0,
+                            "entity": "20230124_miner_stepId",
+                            "kind": 0
+                        },
+                        "ref": "Miner_ActivityChar",
+                        "kind": 2
+                    }
+                ]
+            },
+            {
+                "roles": {
+                    "durationFromCreated": true
+                },
+                "type": {
+                    "underlyingType": 260,
+                    "category": null,
+                    "primitiveType": 4,
+                    "extendedType": 260,
+                    "categoryString": null,
+                    "text": false,
+                    "numeric": true,
+                    "integer": true,
+                    "bool": false,
+                    "dateTime": false,
+                    "duration": false,
+                    "binary": false,
+                    "json": false,
+                    "none": false
+                },
+                "format": "0",
+                "displayName": "Sum of Miner_DurationFromCreated",
+                "queryName": "Sum(20230124_miner_stepId.Miner_DurationFromCreated)",
+                "expr": {
+                    "_kind": 4,
+                    "arg": {
+                        "_kind": 2,
+                        "source": {
+                            "_kind": 0,
+                            "entity": "20230124_miner_stepId",
+                            "variable": "2",
+                            "kind": 0
+                        },
+                        "ref": "Miner_DurationFromCreated",
+                        "kind": 2
+                    },
+                    "func": 0,
+                    "kind": 4
+                },
+                "rolesIndex": {
+                    "durationFromCreated": [
+                        0
+                    ]
+                },
+                "index": 5,
+                "isMeasure": true,
+                "aggregates": {
+                    "minLocal": 0,
+                    "maxLocal": 1972594883
+                }
+            },
+            {
+                "roles": {
+                    "department": true
+                },
+                "type": {
+                    "underlyingType": 1,
+                    "category": null,
+                    "primitiveType": 1,
+                    "extendedType": 1,
+                    "categoryString": null,
+                    "text": true,
+                    "numeric": false,
+                    "integer": false,
+                    "bool": false,
+                    "dateTime": false,
+                    "duration": false,
+                    "binary": false,
+                    "json": false,
+                    "none": false
+                },
+                "displayName": "Department",
+                "queryName": "20230124_miner_stepId.Department",
+                "expr": {
+                    "_kind": 2,
+                    "source": {
+                        "_kind": 0,
+                        "entity": "20230124_miner_stepId",
+                        "variable": "2",
+                        "kind": 0
+                    },
+                    "ref": "Department",
+                    "kind": 2
+                },
+                "rolesIndex": {
+                    "department": [
+                        0
+                    ]
+                },
+                "index": 6,
+                "identityExprs": [
+                    {
+                        "_kind": 2,
+                        "source": {
+                            "_kind": 0,
+                            "entity": "20230124_miner_stepId",
+                            "kind": 0
+                        },
+                        "ref": "Department",
+                        "kind": 2
+                    }
+                ]
+            },
+            {
+                "roles": {
+                    "exceptionStep": true
+                },
+                "type": {
+                    "underlyingType": 5,
+                    "category": null,
+                    "primitiveType": 5,
+                    "extendedType": 5,
+                    "categoryString": null,
+                    "text": false,
+                    "numeric": false,
+                    "integer": false,
+                    "bool": true,
+                    "dateTime": false,
+                    "duration": false,
+                    "binary": false,
+                    "json": false,
+                    "none": false
+                },
+                "format": "\"TRUE\";\"TRUE\";\"FALSE\"",
+                "displayName": "ExceptionStep",
+                "queryName": "20230124_miner_stepId.ExceptionStep",
+                "expr": {
+                    "_kind": 2,
+                    "source": {
+                        "_kind": 0,
+                        "entity": "20230124_miner_stepId",
+                        "variable": "2",
+                        "kind": 0
+                    },
+                    "ref": "ExceptionStep",
+                    "kind": 2
+                },
+                "rolesIndex": {
+                    "exceptionStep": [
+                        0
+                    ]
+                },
+                "index": 7,
+                "identityExprs": [
+                    {
+                        "_kind": 2,
+                        "source": {
+                            "_kind": 0,
+                            "entity": "20230124_miner_stepId",
+                            "kind": 0
+                        },
+                        "ref": "ExceptionStep",
+                        "kind": 2
+                    }
+                ]
+            },
+            {
+                "roles": {
+                    "addedValue": true
+                },
+                "type": {
+                    "underlyingType": 260,
+                    "category": null,
+                    "primitiveType": 4,
+                    "extendedType": 260,
+                    "categoryString": null,
+                    "text": false,
+                    "numeric": true,
+                    "integer": true,
+                    "bool": false,
+                    "dateTime": false,
+                    "duration": false,
+                    "binary": false,
+                    "json": false,
+                    "none": false
+                },
+                "format": "0",
+                "displayName": "ValueEnum",
+                "queryName": "20230124_miner_stepId.ValueEnum",
+                "expr": {
+                    "_kind": 2,
+                    "source": {
+                        "_kind": 0,
+                        "entity": "20230124_miner_stepId",
+                        "variable": "2",
+                        "kind": 0
+                    },
+                    "ref": "ValueEnum",
+                    "kind": 2
+                },
+                "rolesIndex": {
+                    "addedValue": [
+                        0
+                    ]
+                },
+                "index": 8,
+                "identityExprs": [
+                    {
+                        "_kind": 2,
+                        "source": {
+                            "_kind": 0,
+                            "entity": "20230124_miner_stepId",
+                            "kind": 0
+                        },
+                        "ref": "ValueEnum",
+                        "kind": 2
+                    }
+                ]
+            },
+            {
+                "roles": {
+                    "variantString": true
+                },
+                "type": {
+                    "underlyingType": 1,
+                    "category": null,
+                    "primitiveType": 1,
+                    "extendedType": 1,
+                    "categoryString": null,
+                    "text": true,
+                    "numeric": false,
+                    "integer": false,
+                    "bool": false,
+                    "dateTime": false,
+                    "duration": false,
+                    "binary": false,
+                    "json": false,
+                    "none": false
+                },
+                "displayName": "Miner_Variant",
+                "queryName": "20230124_miner_stepId.Miner_Variant",
+                "expr": {
+                    "_kind": 2,
+                    "source": {
+                        "_kind": 0,
+                        "entity": "20230124_miner_stepId",
+                        "variable": "2",
+                        "kind": 0
+                    },
+                    "ref": "Miner_Variant",
+                    "kind": 2
+                },
+                "sort": 1,
+                "sortOrder": 1,
+                "rolesIndex": {
+                    "variantString": [
+                        0
+                    ]
+                },
+                "index": 9,
+                "identityExprs": [
+                    {
+                        "_kind": 2,
+                        "source": {
+                            "_kind": 0,
+                            "entity": "20230124_miner_stepId",
+                            "kind": 0
+                        },
+                        "ref": "Miner_Variant",
+                        "kind": 2
+                    }
+                ]
+            }
+        ],
+        "identity": [
+            {
+                "identityIndex": 0
+            },
+            {
+                "identityIndex": 1
+            },
+            {
+                "identityIndex": 2
+            },
+            {
+                "identityIndex": 3
+            },
+            {
+                "identityIndex": 4
+            },
+            {
+                "identityIndex": 5
+            },
+            {
+                "identityIndex": 6
+            },
+            {
+                "identityIndex": 7
+            },
+            {
+                "identityIndex": 8
+            },
+            {
+                "identityIndex": 9
+            },
+            {
+                "identityIndex": 10
+            },
+            {
+                "identityIndex": 11
+            }
+        ],
+        "identityFields": [
+            {
+                "_kind": 2,
+                "source": {
+                    "_kind": 0,
+                    "entity": "20230124_miner_stepId",
+                    "kind": 0
+                },
+                "ref": "EventId",
+                "kind": 2
+            },
+            {
+                "_kind": 2,
+                "source": {
+                    "_kind": 0,
+                    "entity": "20230124_miner_stepId",
+                    "kind": 0
+                },
+                "ref": "Miner_StepId",
+                "kind": 2
+            },
+            {
+                "_kind": 2,
+                "source": {
+                    "_kind": 0,
+                    "entity": "20230124_miner_stepId",
+                    "kind": 0
+                },
+                "ref": "EventDescription",
+                "kind": 2
+            },
+            {
+                "_kind": 2,
+                "source": {
+                    "_kind": 0,
+                    "entity": "20230124_miner_stepId",
+                    "kind": 0
+                },
+                "ref": "Miner_ActivityChar",
+                "kind": 2
+            },
+            {
+                "_kind": 2,
+                "source": {
+                    "_kind": 0,
+                    "entity": "20230124_miner_stepId",
+                    "kind": 0
+                },
+                "ref": "Department",
+                "kind": 2
+            },
+            {
+                "_kind": 2,
+                "source": {
+                    "_kind": 0,
+                    "entity": "20230124_miner_stepId",
+                    "kind": 0
+                },
+                "ref": "ExceptionStep",
+                "kind": 2
+            },
+            {
+                "_kind": 2,
+                "source": {
+                    "_kind": 0,
+                    "entity": "20230124_miner_stepId",
+                    "kind": 0
+                },
+                "ref": "ValueEnum",
+                "kind": 2
+            },
+            {
+                "_kind": 2,
+                "source": {
+                    "_kind": 0,
+                    "entity": "20230124_miner_stepId",
+                    "kind": 0
+                },
+                "ref": "Miner_Variant",
+                "kind": 2
+            }
+        ],
+        "rows": [
+            [
+                186,
+                1,
+                1,
+                "Purchase order line is created",
+                "A",
+                0,
+                "Purchase",
+                false,
+                1,
+                "ABCPRRSUWKYJ"
+            ],
+            [
+                186,
+                2,
+                2,
+                "Purchase order is confirmed",
+                "B",
+                153188,
+                "Purchase",
+                false,
+                2,
+                "ABCPRRSUWKYJ"
+            ],
+            [
+                186,
+                3,
+                3,
+                "Document is printed",
+                "C",
+                177553,
+                "Purchase",
+                false,
+                3,
+                "ABCPRRSUWKYJ"
+            ],
+            [
+                186,
+                16,
+                4,
+                "Invoice Processing invoice imported",
+                "P",
+                448747236,
+                "Purchase",
+                false,
+                3,
+                "ABCPRRSUWKYJ"
+            ],
+            [
+                186,
+                18,
+                5,
+                "Purchase order not available",
+                "R",
+                448747236,
+                "Purchase",
+                false,
+                3,
+                "ABCPRRSUWKYJ"
+            ],
+            [
+                186,
+                18,
+                6,
+                "Purchase order not available",
+                "R",
+                448747236,
+                "Purchase",
+                false,
+                3,
+                "ABCPRRSUWKYJ"
+            ],
+            [
+                186,
+                19,
+                7,
+                "Invoice Processing invoice matched",
+                "S",
+                448747236,
+                "Purchase",
+                false,
+                3,
+                "ABCPRRSUWKYJ"
+            ],
+            [
+                186,
+                21,
+                8,
+                "Check completed",
+                "U",
+                448747236,
+                "Purchase",
+                false,
+                3,
+                "ABCPRRSUWKYJ"
+            ],
+            [
+                186,
+                23,
+                9,
+                "Release",
+                "W",
+                448747236,
+                "Purchase",
+                false,
+                3,
+                "ABCPRRSUWKYJ"
+            ],
+            [
+                186,
+                11,
+                10,
+                "Purchase order is received",
+                "K",
+                503245488,
+                "Logistics",
+                false,
+                2,
+                "ABCPRRSUWKYJ"
+            ],
+            [
+                186,
+                25,
+                11,
+                "Invoice is paid",
+                "Y",
+                646862097,
+                "Finance",
+                false,
+                3,
+                "ABCPRRSUWKYJ"
+            ],
+            [
+                186,
+                10,
+                12,
+                "Purchase order is re-confirmed",
+                "J",
+                1972594883,
+                "Purchase",
+                true,
+                1,
+                "ABCPRRSUWKYJ"
+            ]
+        ]
+    }
+}
