@@ -2,10 +2,10 @@ Baantjes strekken met PowerBI, D3 en een Direct Follow Graph
 ------------------------------------------------------------
 
 # Intro
-Ik wil graag iets vertellen over hoe ik begin vorige jaar verwikkeld ben raakte in het [**Fellowmining**](https://www.fellowmindcompany.com/nl-nl/oplossingen/data-en-ai/fellowmining/) project. 
+Ik wil graag iets vertellen over hoe ik begin vorige jaar verwikkeld ben geraakt in het [**Fellowmining**](https://www.fellowmindcompany.com/nl-nl/oplossingen/data-en-ai/fellowmining/) project. 
 
 
-Op de relatief onschuldige vraag of ik data dynamisch zou kunnen visualiseren met behulp van PowerBI API in combinatie met React, antwoorden ik: "vast wel". 
+Op de relatief onschuldige vraag of ik data dynamisch zou kunnen visualiseren met behulp van PowerBI API in combinatie met React, antwoordde ik: "Vast wel". 
 
 ![hebjeff](./assets/20220201_heb_je_f.png)
 
