@@ -52,6 +52,12 @@ export function TableToDFG(dataview) {
                     duration: stepDuration
                 }
 
+                // Add lanes to metadata
+                let laneIndex = graph.metadata.lanes.indexOf(pbiData.department)
+                if (laneIndex === -1) {
+                    laneIndex = graph.metadata.lanes.push(pbiData.department) - 1
+                } 
+
                 // Add node to graph
                 let node = graph.nodes ? graph.nodes.find(n => n.id === pbiData.activityCharacter) : undefined;
                 if (!node) {
@@ -60,18 +66,13 @@ export function TableToDFG(dataview) {
                         id: pbiData.activityCharacter,
                         label: pbiData.description,
                         metadata: {
-                            belongsToLane: pbiData.department,
+                            belongsToLane: laneIndex,
                             addedValue: pbiData.addedValue,
                         },
                         getIndex: () => { return graph.nodes.findIndex(n => n.id === node.id); }
                     };
 
                     graph.nodes.push(node);
-
-                    // Add lanes to metadata
-                    if (graph.metadata.lanes.indexOf(pbiData.department) === -1) {
-                        graph.metadata.lanes.push(pbiData.department)
-                    }
                 }
 
                 // Add pbiData to pbiDataRows

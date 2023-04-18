@@ -11,7 +11,7 @@ Op de relatief onschuldige vraag of ik data dynamisch zou kunnen visualiseren me
 
 Inmiddels een jaar verder heb ik versie 2.0 opgeleverd van de Fellowmining swimminglane visual dit met behulp van de PowerBI-visuals tools API, D3.js framework, React en veel Javascript/Typescript.
 
-<div style="padding: 5px"><img src="./assets/900px-New_Power_BI_Logo.svg.png" width="100px" /><img src="./assets/react.svg" width="100px" /><img src="./assets/d3.svg" width="100px" /><img src="./assets/JavaScript-logo.png" width="100px" /><img src="./assets/Typescript_logo_2020.png" width="100px" /></div>
+<div style="padding: 5px"><img style="margin: 4px" src="./assets/900px-New_Power_BI_Logo.svg.png" width="100px" /><img  style="margin: 4px" src="./assets/react.svg" width="100px" /><img  style="margin: 4px" src="./assets/d3.svg" width="100px" /><img  style="margin: 4px" src="./assets/JavaScript-logo.png" width="100px" /><img  style="margin: 4px" src="./assets/Typescript_logo_2020.png" width="100px" /></div>
 
 Het probleem waar het Fellowmining project team tegenaan liep was dat zij het, met de beschikbare middelen, niet voor elkaar kregen de data in PowerBI weer te geven als een zgn. _swimming lane graph_. Zelf maken was in dit geval de beste optie. 
 
@@ -63,6 +63,7 @@ Als je zelf ook een cPowerBI ustom visual wil maken dan raad ik aan te starten o
 * [Power BI visuals documentation](https://learn.microsoft.com/en-us/power-bi/developer/visuals/)
 * [Developing Your First PowerBI Visual](https://github.com/PowerBi-Projects/PowerBI-visuals)
 * [PowerBI-visuals tools API](https://github.com/microsoft/PowerBI-visuals-tools)
+* [MDN: Scalable Vector Graphics](https://developer.mozilla.org/en-US/docs/Web/SVG)
 
 Er is voldoende documentatie maar niet altijd even duidelijk. Meestal wordt alles goed uitgelegd, maar als je meer informatie zoekt over een specifieke instelling dan moet je goed doorzoeken of op er vragen over gaan stellen.
 

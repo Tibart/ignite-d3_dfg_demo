@@ -13,92 +13,121 @@ export function DirectFollowGraph(graph) {
     // Set svg canvas
     let svg = d3.select(".app-header")
         .append("svg")
-        .attr("width", 1024)
-        .attr("height", 640)
-        .append("g").attr("id", "canvas")
+        .attr("width", 1280)
+        .attr("height", 720)
 
-    // Draw lanes
-    svg.append("g")
-        .attr("id", "lanes")
-        .style("stroke", "#000")
-        .style("fill", "transparent")
+        .append("g").attr("id", "canvas").style("fill", "tomato")
 
-        .selectAll("g.lane")
-        .data(graph.metadata.lanes)
-        .enter()
-        .append("g")
-        .attr("class", "lane")
-        .append("rect")
-        .attr("width", "100%")
-        .attr("height", laneHeight)
-        .attr("x", 0)
-        .attr("y", (d, i) => { return i * laneHeight })
+    // // Draw lanes
+    // svg.append("g").attr("id", "lanes").style("stroke", "#000").style("background", "transparent")
+
+    //     .selectAll("g.lane")
+    //     .data(graph.metadata.lanes)
+    //     .enter()
+
+    //     .append("g").attr("class", "lane")
+
+    //     .append("rect")
+    //     .attr("width", "100%")
+    //     .attr("height", laneHeight)
+    //     .attr("x", 0)
+    //     .attr("y", (d, i) => { return i * laneHeight })
 
     // Draw dfg
     let dfg = svg.append("g")
         .attr("id", "dfg")
 
-    // Draw edges
-    dfg.selectAll("g.edges")
-        .data(graph.edges)
-        .enter()
-        .each((d, i) => {
+    // // DRAW NODES
+    // dfg.selectAll("g.node")
+    //     .data(graph.nodes)
+    //     .enter()
+    //     .each((d, i) => {
 
-            const sourceNode = d.getSourceNode()
-            const targetNode = d.getTargetNode()
-            const laneIndex = graph.metadata.lanes.indexOf(sourceNode.metadata.belongsToLane)
-            const nodeIndex = sourceNode.getIndex()
-            const edgeX = (nodeWidth * 1.5) + (nodeIndex * (nodeWidth * 2))
-            const edgeY = (laneIndex * laneHeight) + (laneHeight / 2) - (nodeHeight / 2)
+    //         const nodeX = (nodeWidth / 2) + (d.getIndex() * (nodeWidth * 2))
+    //         const nodeY = (d.metadata.belongsToLane * laneHeight) + (laneHeight / 2) - (nodeHeight / 2)
+    //         const radius = 10
 
-            let edge = dfg.append("g")
-                .attr("class", "egde")
-                .style("stroke", "#555")
-                .style("stroke-width", 1)
-                .style("fill", "none")
+    //         let node = dfg.append("g").attr("class", "node").style("stroke", "silver").style("stroke-width", 2).style("fill", "ivory")
 
-                if (targetNode) {
-                    edge.append("path")
-                    .attr("d", () => {
-                        let c = d3.path()
-                        c.moveTo(edgeX, edgeY)
-                        c.lineTo(edgeX + nodeWidth, edgeY) // TODO if no targetNode than no line
-                        return c
-                    })
-                }
-        })
+    //         node.append("rect")
+    //             .attr("width", nodeWidth).attr("height", nodeHeight)
+    //             .attr("x", nodeX).attr("y", nodeY)
+    //             .attr("rx", radius).attr("ry", radius)
 
-    // Draw nodes
-    dfg.selectAll("g.node")
-        .data(graph.nodes)
-        .enter()
-        .each((d, i) => {
+    //         // // ADD TEXT
+    //         // node.append("text")
+    //         //     .attr("text-anchor", "middle")
+    //         //     .attr("dominant-baseline", "hanging")
+    //         //     .attr("width", nodeWidth).attr("height", nodeHeight)
+    //         //     .attr("x", nodeX + (nodeWidth / 2)).attr("y", nodeY)
+    //         //     .text(d.id)
+    //     })
 
-            const laneIndex = graph.metadata.lanes.indexOf(d.metadata.belongsToLane)
-            const nodeIndex = d.getIndex()
-            const nodeX = (nodeWidth / 2) + (nodeIndex * (nodeWidth * 2))
-            const nodeY = (laneIndex * laneHeight) + (laneHeight / 2) - (nodeHeight / 2)
+    // // DRAW EDGES
+    // dfg.selectAll("g.edges")
+    //     .data(graph.edges)
+    //     .enter()
+    //     .each((d, i) => {
 
-            dfg.append("g")
-                .attr("class", "node")
-                .style("stroke", "#555")
-                .style("fill", "#aaa")
+    //         let edge = dfg.append("g").attr("class", "egde").style("stroke", "gold").style("stroke-width", 2).style("fill", "none")
 
-                .append("rect")
-                .attr("width", nodeWidth)
-                .attr("height", nodeHeight)
-                .attr("x", nodeX)
-                .attr("y", nodeY)
+    //         const targetNode = d.getTargetNode()
+    //         if (targetNode) {
 
-                .attr("rx", 3).attr("ry", 3)  // rounded corners
-        })
+    //             const sourceNode = d.getSourceNode()
+    //             if (sourceNode.metadata.belongsToLane < targetNode.metadata.belongsToLane) {
+
+    //                 edge.append("path").attr("d", () => {
+    //                     let path = d3.path()
+
+    //                     const sourceX = nodeWidth + (sourceNode.getIndex() * (nodeWidth * 2))
+    //                     const sourceY = (sourceNode.metadata.belongsToLane * laneHeight) + (laneHeight / 2) + (nodeHeight / 2)
+    //                     path.moveTo(sourceX, sourceY)
+
+    //                     const laneDifference = targetNode.metadata.belongsToLane - sourceNode.metadata.belongsToLane
+    //                     const targetY = sourceY + (laneHeight * laneDifference) - (nodeHeight / 2)
+    //                     path.lineTo(sourceX, targetY)
+
+    //                     const targetX = nodeWidth + (targetNode.getIndex() * (nodeWidth * 2)) - (nodeWidth / 2)
+    //                     path.lineTo(targetX, targetY)
+
+    //                     return path
+    //                 })
+
+    //             } else if (sourceNode.metadata.belongsToLane > targetNode.metadata.belongsToLane) {
+
+    //                 edge.append("path").attr("d", () => {
+    //                     let path = d3.path()
+
+    //                     const sourceX = nodeWidth + (sourceNode.getIndex() * (nodeWidth * 2))
+    //                     const sourceY = (sourceNode.metadata.belongsToLane * laneHeight) + (laneHeight / 2) - (nodeHeight / 2)
+    //                     path.moveTo(sourceX, sourceY)
+
+    //                     const laneDifference = sourceNode.metadata.belongsToLane - targetNode.metadata.belongsToLane
+    //                     const targetY = sourceY - (laneHeight * laneDifference) + (nodeHeight / 2)
+    //                     path.lineTo(sourceX, targetY)
+
+    //                     const targetX = nodeWidth + (targetNode.getIndex() * (nodeWidth * 2)) - (nodeWidth / 2)
+    //                     path.lineTo(targetX, targetY)
+
+    //                     return path
+    //                 })
+
+    //             } else {
+
+    //                 edge.append("path").attr("d", () => {
+    //                     let path = d3.path()
+
+    //                     const sourceX = (nodeWidth * 1.5) + (sourceNode.getIndex() * (nodeWidth * 2))
+    //                     const sourceY = (sourceNode.metadata.belongsToLane * laneHeight) + (laneHeight / 2)
+    //                     path.moveTo(sourceX, sourceY)
+
+    //                     const targetX = sourceX + nodeWidth
+    //                     path.lineTo(targetX, sourceY)
+
+    //                     return path
+    //                 })
+    //             }
+    //         }
+    //     })
 }
-
-function draw(context) {
-    context.moveTo(10, 10); // move current point to ⟨10,10⟩
-    context.lineTo(100, 10); // draw straight line to ⟨100,10⟩
-    context.arcTo(150, 150, 300, 10, 40); // draw an arc, the turtle ends up at ⟨194.4,108.5⟩
-    context.lineTo(300, 10); // draw straight line to ⟨300,10⟩
-    // etc.
-    return context; // not mandatory, but will make it easier to chain operations
-  }
