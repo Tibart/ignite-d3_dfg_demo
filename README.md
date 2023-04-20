@@ -10,7 +10,7 @@ Inmiddels een jaar verder heb ik met de PowerBI-visuals tools API, D3.js framewo
 
 <div style="padding: 5px"><img style="margin: 4px" src="./assets/900px-New_Power_BI_Logo.svg.png" width="100px" /><img  style="margin: 4px" src="./assets/react.svg" width="100px" /><img  style="margin: 4px" src="./assets/d3.svg" width="100px" /><img  style="margin: 4px" src="./assets/JavaScript-logo.png" width="100px" /><img  style="margin: 4px" src="./assets/Typescript_logo_2020.png" width="100px" /></div>
 
-Het probleem waar het **Fellowmining project** team tegenaan liep was dat zij het met de beschikbare middelen niet voor elkaar kregen de data als een **swimminglane** weer te geven. Zelf maken was in dit geval de meest voor de hand liggende en beste optie.
+Het probleem waar het **Fellowmining project** team tegenaan liep was dat zij het met de beschikbare middelen niet voor elkaar kregen de data als een **swimlane diagram** weer te geven. Zelf maken was in dit geval de meest voor de hand liggende en beste optie.
 
 Over hoe ik dat heb gedaan en wat ik daarvan heb geleerd wil ik graag e.e.a. vertellen.
 
@@ -23,9 +23,11 @@ De uitdaging bestond uit drie delen, nl.:
 3. Implementatie 
 
 ## Data conversie
-Voor het weergegeven van een zgn. _swimming lane graph_ was de eerste stap het omzetten van de data afkomstig uit PowerBI naar een meer bruikbaar data type, een [Directed graph](https://en.wikipedia.org/wiki/Directed_graph).
+Voor het weergegeven van een zgn. [_swimlane diagram_](https://en.wikipedia.org/wiki/Swimlane) was de eerste stap het omzetten van de data afkomstig uit PowerBI naar een meer bruikbaar data type, een [Directed graph](https://en.wikipedia.org/wiki/Directed_graph).
 
-<div style="background: white; padding: 5px"><img src="./assets//table_data.svg" width="150px" /><img src="./assets/right-arrow-48.png" height="100px" width="100px" /><img src="./assets/Directed_graph_no_background.svg" width="200px" /></div>
+<!-- <div style="background: white; padding: 5px"><img src="./assets//table_data.svg" width="150px" /><img src="./assets/right-arrow-48.png" height="100px" width="100px" /><img src="./assets/Directed_graph_no_background.svg" width="200px" /></div> -->
+
+![](./assets/powerbi2graph.png)
 
 PowerBI kent het datatype _graph_ niet. Wat de custom visual ontvangt is JSON object waarin de data, afhankelijk van de [_data view mapping_](https://learn.microsoft.com/en-us/power-bi/developer/visuals/dataview-mappings), wordt aangeboden als bijvoorbeeld _categorical_ (categories & values) of _table_ (columns & rows).  Daarnaast zijn er ook nog voor deze toepassing minder bruikbare mapping opties _single_ en _matrix_.
 
@@ -39,7 +41,7 @@ De _table_ data moet eerst worden gesorteerd zodat de regels op event volgorde s
 
 
 ## Visualisatie
-Nu de data is geconverteerd naar een graph data type, kunnen we aan de slag met het visualiseren daarvan. Hiervoor kan bijvoorbeeld het populaire [Graphviz](https://graphviz.org/) gebruikt worden. Naast dat deze oplossing niet onmiddellijk de swimminglane graph aanbiedt, is Graphviz in combinatie met PowerBI niet mogelijk. Microsoft's PowerBI zelf draagt de [D3.js library](https://d3js.org/) aan. Hiermee kan data in combinatie met React en de [PowerBI-visuals tools API](https://github.com/microsoft/PowerBI-visuals-tools) relatief eenvoudig worden gevisualiseerd. 
+Nu de data is geconverteerd naar een graph data type, kunnen we aan de slag met het visualiseren daarvan. Hiervoor kan bijvoorbeeld het populaire [Graphviz](https://graphviz.org/) gebruikt worden. Naast dat deze oplossing niet onmiddellijk de _swimlane diagram_ aanbiedt, is Graphviz in combinatie met PowerBI niet mogelijk. Microsoft's PowerBI zelf draagt de [D3.js library](https://d3js.org/) aan. Hiermee kan data in combinatie met React en de [PowerBI-visuals tools API](https://github.com/microsoft/PowerBI-visuals-tools) relatief eenvoudig worden gevisualiseerd. 
 
 D3.js is een library/framework dat het Document Object Model ([DOM](https://en.wikipedia.org/wiki/Document_Object_Model)) kan manipuleren o.b.v. data. Ofwel, D3.js kan op een relatief makkelijke manier webpagina elementen en haar attributen aanpassen, toevoegen of verwijderen. Dit framework is buitengewoon compleet en maakt visualiseren van alle typen data mogelijk in elke wenselijk vorm. Je moet het alleen wel zelf maken!
 
@@ -57,7 +59,7 @@ Inmiddels is de implementatie van de custom visual afgerond en maakt volwaardig 
 
 
 # Hoe nu verder
-Als je zelf ook een cPowerBI ustom visual wil maken dan raad ik aan te starten op één van de volgende sites:
+Als je zelf ook een PowerBI custom visual wil maken dan raad ik aan te starten op één van de volgende sites:
 
 * [Power BI visuals documentation](https://learn.microsoft.com/en-us/power-bi/developer/visuals/)
 * [Developing Your First PowerBI Visual](https://github.com/PowerBi-Projects/PowerBI-visuals)
