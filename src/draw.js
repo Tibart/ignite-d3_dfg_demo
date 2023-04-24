@@ -18,116 +18,116 @@ export function DirectFollowGraph(graph) {
 
         .append("g").attr("id", "canvas").style("fill", "tomato")
 
-    // // Draw lanes
-    // svg.append("g").attr("id", "lanes").style("stroke", "#000").style("background", "transparent")
+    // Draw lanes
+    svg.append("g").attr("id", "lanes").style("stroke", "#000").style("background", "transparent")
 
-    //     .selectAll("g.lane")
-    //     .data(graph.metadata.lanes)
-    //     .enter()
+        .selectAll("g.lane")
+        .data(graph.metadata.lanes)
+        .enter()
 
-    //     .append("g").attr("class", "lane")
+        .append("g").attr("class", "lane")
 
-    //     .append("rect")
-    //     .attr("width", "100%")
-    //     .attr("height", laneHeight)
-    //     .attr("x", 0)
-    //     .attr("y", (d, i) => { return i * laneHeight })
+        .append("rect")
+        .attr("width", "100%")
+        .attr("height", laneHeight)
+        .attr("x", 0)
+        .attr("y", (d, i) => { return i * laneHeight })
 
     // Draw dfg
     let dfg = svg.append("g")
         .attr("id", "dfg")
 
-    // // DRAW NODES
-    // dfg.selectAll("g.node")
-    //     .data(graph.nodes)
-    //     .enter()
-    //     .each((d, i) => {
+    // DRAW NODES
+    dfg.selectAll("g.node")
+        .data(graph.nodes)
+        .enter()
+        .each((d, i) => {
 
-    //         const nodeX = (nodeWidth / 2) + (d.getIndex() * (nodeWidth * 2))
-    //         const nodeY = (d.metadata.belongsToLane * laneHeight) + (laneHeight / 2) - (nodeHeight / 2)
-    //         const radius = 10
+            const nodeX = (nodeWidth / 2) + (d.getIndex() * (nodeWidth * 2))
+            const nodeY = (d.metadata.belongsToLane * laneHeight) + (laneHeight / 2) - (nodeHeight / 2)
+            const radius = 10
 
-    //         let node = dfg.append("g").attr("class", "node").style("stroke", "silver").style("stroke-width", 2).style("fill", "ivory")
+            let node = dfg.append("g").attr("class", "node").style("stroke", "silver").style("stroke-width", 2).style("fill", "ivory")
 
-    //         node.append("rect")
-    //             .attr("width", nodeWidth).attr("height", nodeHeight)
-    //             .attr("x", nodeX).attr("y", nodeY)
-    //             .attr("rx", radius).attr("ry", radius)
+            node.append("rect")
+                .attr("width", nodeWidth).attr("height", nodeHeight)
+                .attr("x", nodeX).attr("y", nodeY)
+                .attr("rx", radius).attr("ry", radius)
 
-    //         // // ADD TEXT
-    //         // node.append("text")
-    //         //     .attr("text-anchor", "middle")
-    //         //     .attr("dominant-baseline", "hanging")
-    //         //     .attr("width", nodeWidth).attr("height", nodeHeight)
-    //         //     .attr("x", nodeX + (nodeWidth / 2)).attr("y", nodeY)
-    //         //     .text(d.id)
-    //     })
+            // // ADD TEXT
+            // node.append("text")
+            //     .attr("text-anchor", "middle")
+            //     .attr("dominant-baseline", "hanging")
+            //     .attr("width", nodeWidth).attr("height", nodeHeight)
+            //     .attr("x", nodeX + (nodeWidth / 2)).attr("y", nodeY)
+            //     .text(d.id)
+        })
 
-    // // DRAW EDGES
-    // dfg.selectAll("g.edges")
-    //     .data(graph.edges)
-    //     .enter()
-    //     .each((d, i) => {
+    // DRAW EDGES
+    dfg.selectAll("g.edges")
+        .data(graph.edges)
+        .enter()
+        .each((d, i) => {
 
-    //         let edge = dfg.append("g").attr("class", "egde").style("stroke", "gold").style("stroke-width", 2).style("fill", "none")
+            let edge = dfg.append("g").attr("class", "egde").style("stroke", "gold").style("stroke-width", 2).style("fill", "none")
 
-    //         const targetNode = d.getTargetNode()
-    //         if (targetNode) {
+            const targetNode = d.getTargetNode()
+            if (targetNode) {
 
-    //             const sourceNode = d.getSourceNode()
-    //             if (sourceNode.metadata.belongsToLane < targetNode.metadata.belongsToLane) {
+                const sourceNode = d.getSourceNode()
+                if (sourceNode.metadata.belongsToLane < targetNode.metadata.belongsToLane) {
 
-    //                 edge.append("path").attr("d", () => {
-    //                     let path = d3.path()
+                    edge.append("path").attr("d", () => {
+                        let path = d3.path()
 
-    //                     const sourceX = nodeWidth + (sourceNode.getIndex() * (nodeWidth * 2))
-    //                     const sourceY = (sourceNode.metadata.belongsToLane * laneHeight) + (laneHeight / 2) + (nodeHeight / 2)
-    //                     path.moveTo(sourceX, sourceY)
+                        const sourceX = nodeWidth + (sourceNode.getIndex() * (nodeWidth * 2))
+                        const sourceY = (sourceNode.metadata.belongsToLane * laneHeight) + (laneHeight / 2) + (nodeHeight / 2)
+                        path.moveTo(sourceX, sourceY)
 
-    //                     const laneDifference = targetNode.metadata.belongsToLane - sourceNode.metadata.belongsToLane
-    //                     const targetY = sourceY + (laneHeight * laneDifference) - (nodeHeight / 2)
-    //                     path.lineTo(sourceX, targetY)
+                        const laneDifference = targetNode.metadata.belongsToLane - sourceNode.metadata.belongsToLane
+                        const targetY = sourceY + (laneHeight * laneDifference) - (nodeHeight / 2)
+                        path.lineTo(sourceX, targetY)
 
-    //                     const targetX = nodeWidth + (targetNode.getIndex() * (nodeWidth * 2)) - (nodeWidth / 2)
-    //                     path.lineTo(targetX, targetY)
+                        const targetX = nodeWidth + (targetNode.getIndex() * (nodeWidth * 2)) - (nodeWidth / 2)
+                        path.lineTo(targetX, targetY)
 
-    //                     return path
-    //                 })
+                        return path
+                    })
 
-    //             } else if (sourceNode.metadata.belongsToLane > targetNode.metadata.belongsToLane) {
+                } else if (sourceNode.metadata.belongsToLane > targetNode.metadata.belongsToLane) {
 
-    //                 edge.append("path").attr("d", () => {
-    //                     let path = d3.path()
+                    edge.append("path").attr("d", () => {
+                        let path = d3.path()
 
-    //                     const sourceX = nodeWidth + (sourceNode.getIndex() * (nodeWidth * 2))
-    //                     const sourceY = (sourceNode.metadata.belongsToLane * laneHeight) + (laneHeight / 2) - (nodeHeight / 2)
-    //                     path.moveTo(sourceX, sourceY)
+                        const sourceX = nodeWidth + (sourceNode.getIndex() * (nodeWidth * 2))
+                        const sourceY = (sourceNode.metadata.belongsToLane * laneHeight) + (laneHeight / 2) - (nodeHeight / 2)
+                        path.moveTo(sourceX, sourceY)
 
-    //                     const laneDifference = sourceNode.metadata.belongsToLane - targetNode.metadata.belongsToLane
-    //                     const targetY = sourceY - (laneHeight * laneDifference) + (nodeHeight / 2)
-    //                     path.lineTo(sourceX, targetY)
+                        const laneDifference = sourceNode.metadata.belongsToLane - targetNode.metadata.belongsToLane
+                        const targetY = sourceY - (laneHeight * laneDifference) + (nodeHeight / 2)
+                        path.lineTo(sourceX, targetY)
 
-    //                     const targetX = nodeWidth + (targetNode.getIndex() * (nodeWidth * 2)) - (nodeWidth / 2)
-    //                     path.lineTo(targetX, targetY)
+                        const targetX = nodeWidth + (targetNode.getIndex() * (nodeWidth * 2)) - (nodeWidth / 2)
+                        path.lineTo(targetX, targetY)
 
-    //                     return path
-    //                 })
+                        return path
+                    })
 
-    //             } else {
+                } else {
 
-    //                 edge.append("path").attr("d", () => {
-    //                     let path = d3.path()
+                    edge.append("path").attr("d", () => {
+                        let path = d3.path()
 
-    //                     const sourceX = (nodeWidth * 1.5) + (sourceNode.getIndex() * (nodeWidth * 2))
-    //                     const sourceY = (sourceNode.metadata.belongsToLane * laneHeight) + (laneHeight / 2)
-    //                     path.moveTo(sourceX, sourceY)
+                        const sourceX = (nodeWidth * 1.5) + (sourceNode.getIndex() * (nodeWidth * 2))
+                        const sourceY = (sourceNode.metadata.belongsToLane * laneHeight) + (laneHeight / 2)
+                        path.moveTo(sourceX, sourceY)
 
-    //                     const targetX = sourceX + nodeWidth
-    //                     path.lineTo(targetX, sourceY)
+                        const targetX = sourceX + nodeWidth
+                        path.lineTo(targetX, sourceY)
 
-    //                     return path
-    //                 })
-    //             }
-    //         }
-    //     })
+                        return path
+                    })
+                }
+            }
+        })
 }

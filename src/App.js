@@ -28,7 +28,7 @@ export class App extends React.Component {
 
   componentDidMount() {
     // Draw graph
-    // this.delay(1000).then(() => draw.DirectFollowGraph(this.graph))
+    this.delay(1000).then(() => draw.DirectFollowGraph(this.graph))
   }
 
   delay(time) {
